@@ -6,7 +6,7 @@
 
 Name:		toxcore
 Version:	0.2.12
-Release:	3%{?dist}
+Release:	4%{?dist}
 Summary:	All-in-one secure communication platform
 
 License:	GPLv3
@@ -65,7 +65,7 @@ Tox DHT bootstrap daemon.
 %build
 export CFLAGS="%{optflags} -fPIC"
 export CXXFLAGS="%{optflags} -fPIC"
-%cmake -DSTRICT_ABI=ON
+%cmake -DSTRICT_ABI=ON -DDHT-BOOTSTRAP=OFF
 %cmake_build
 
 
@@ -97,7 +97,6 @@ getent passwd tox-bootstrapd >/dev/null || \
 %license LICENSE
 %doc README.md CHANGELOG.md
 %{_libdir}/libtoxcore.so*
-%{_bindir}/DHT_bootstrap
 
 %files devel
 %defattr(-, root, root)
