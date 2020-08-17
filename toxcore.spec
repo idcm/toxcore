@@ -6,7 +6,7 @@
 
 Name:		toxcore
 Version:	0.2.12
-Release:	2%{?dist}
+Release:	3%{?dist}
 Summary:	All-in-one secure communication platform
 
 License:	GPLv3
@@ -50,7 +50,6 @@ Requires:	%{name}-devel = %{version}-%{release}
 %package tox-bootstrapd
 Summary:	Tox DHT bootstrap daemon.
 Requires:	%{name} = %{version}-%{release}
-Requires(pre):	/usr/sbin/useradd
 %{?systemd_requires}
 
 %description tox-bootstrapd
