@@ -6,7 +6,7 @@
 
 Name:		toxcore
 Version:	0.2.12
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	All-in-one secure communication platform
 
 License:	GPLv3
